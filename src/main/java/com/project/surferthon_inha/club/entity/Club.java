@@ -1,6 +1,7 @@
 package com.project.surferthon_inha.club.entity;
 
 
+import jakarta.persistence.GeneratedValue;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -10,7 +11,6 @@ import org.springframework.data.annotation.Id;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
 public class Club {
 
     @Id
@@ -30,4 +30,12 @@ public class Club {
 
     @NotNull
     private Long userId;
+
+    public Club(String name, String description, Double rating, Long ratingCount, Long userId) {
+        this.name = name;
+        this.description = description;
+        this.rating = rating;
+        this.ratingCount = ratingCount;
+        this.userId = userId;
+    }
 }
