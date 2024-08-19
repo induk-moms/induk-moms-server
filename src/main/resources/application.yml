@@ -1,0 +1,26 @@
+spring:
+    application:
+        name: surferthon_inha
+
+    datasource:
+        url: jdbc:mysql://127.0.0.1:3306/myTempDB?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: 1234
+
+    jpa:
+        #show-sql: true
+        hibernate:
+            ddl-auto: create-drop
+        properties:
+            hibernate:
+                format_sql: true
+
+    jackson:
+        serialization:
+            write-date-keys-as-timestamps: false
+
+Cors:
+    AllowedOriginPatterns: '*'
+    AllowedHeaders: '*'
+    AllowedMethods: '*'
